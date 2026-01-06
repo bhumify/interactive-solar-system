@@ -1,3 +1,4 @@
+"use client"
 export default function Stars() {
   const stars = Array.from({ length: 150 });
 
