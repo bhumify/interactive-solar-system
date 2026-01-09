@@ -5,6 +5,7 @@
 import { useState } from "react";
 import Sun from "./Sun";
 import Planet from "./Planet";
+import EarthSystem from "./EarthSystem";
 
 const PLANETS =[
   {
@@ -22,13 +23,7 @@ const PLANETS =[
     speed:13,
   },
 
-   {
-    name:"Earth",
-    size:12,
-    orbitSize:320,
-    color:"#4f9cff",
-    speed:16,
-  },
+  
 
   {
     name:"Mars",
@@ -89,6 +84,8 @@ export default function SolarSystem(){
       />
 
     ))}
+
+    <EarthSystem/>
 
 
     {activePlanet && (
