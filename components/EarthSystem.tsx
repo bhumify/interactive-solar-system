@@ -25,7 +25,7 @@ export default function EarthSystem({ isActive, onHover }: EarthSystemProps) {
     >
       <div className="absolute inset-0 rounded-full border border-white/10" />
 
-      {/* Earth hover hitbox */}
+      
       <div
         className="absolute flex items-center justify-center pointer-events-auto"
         style={{

@@ -21,7 +21,7 @@ export default function Planet({
   isActive,
   onHover,
 }: PlanetProps) {
-  const HITBOX = 36; // invisible hover area (KEY FIX)
+  const HITBOX = 36; 
 
   return (
     <div
@@ -34,10 +34,10 @@ export default function Planet({
         animation: `spin ${speed}s linear infinite`,
       }}
     >
-      {/* Orbit path (no pointer events) */}
+     
       <div className="absolute inset-0 rounded-full border border-white/10" />
 
-      {/* Hover hitbox */}
+      
       <div
         className="absolute flex items-center justify-center pointer-events-auto"
         style={{
@@ -49,7 +49,7 @@ export default function Planet({
         onPointerEnter={() => onHover(name)}
         onPointerLeave={() => onHover(null)}
       >
-        {/* Actual planet */}
+        
         <div
           className={`rounded-full transition-all duration-200 ${
             isActive ? "shadow-[0_0_14px_4px_rgba(255,255,255,0.7)] scale-110" : ""
