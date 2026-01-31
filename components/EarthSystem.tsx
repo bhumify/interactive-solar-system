@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import Moon from "./Moon";
@@ -23,11 +24,12 @@ export default function EarthSystem({ isActive, onHover }: EarthSystemProps) {
         animation: "spin 16s linear infinite",
       }}
     >
+   
       <div className="absolute inset-0 rounded-full border border-white/10" />
 
-      
+ 
       <div
-        className="absolute flex items-center justify-center pointer-events-auto"
+        className="absolute pointer-events-auto"
         style={{
           width: HITBOX,
           height: HITBOX,
@@ -39,13 +41,22 @@ export default function EarthSystem({ isActive, onHover }: EarthSystemProps) {
       >
         <div
           className={`rounded-full bg-[#4f9cff] transition-all duration-200 ${
-            isActive ? "shadow-[0_0_14px_4px_rgba(79,156,255,0.8)] scale-110" : ""
+            isActive
+              ? "shadow-[0_0_14px_4px_rgba(79,156,255,0.8)] scale-110"
+              : ""
           }`}
           style={{ width: 12, height: 12 }}
         >
           <Moon />
         </div>
+
+        {isActive && (
+          <div className="absolute left-10 top-1/2 -translate-y-1/2 whitespace-nowrap bg-black/70 text-white text-xs px-3 py-1 rounded-md border border-white/20 backdrop-blur">
+            <strong>Earth</strong>
+          </div>
+        )}
       </div>
     </div>
   );
 }
+

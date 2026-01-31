@@ -36,12 +36,7 @@ export default function SolarSystem() {
         isActive={activePlanet === "Earth"}
         onHover={setActivePlanet}
       />
-
-      {activePlanet && (
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/70 text-white px-6 py-3 rounded-lg border border-white/20 backdrop-blur z-50">
-          <strong>{activePlanet}</strong>
-        </div>
-      )}
     </>
   );
 }
+

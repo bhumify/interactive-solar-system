@@ -21,7 +21,7 @@ export default function Planet({
   isActive,
   onHover,
 }: PlanetProps) {
-  const HITBOX = 36; 
+  const HITBOX = 36;
 
   return (
     <div
@@ -34,12 +34,11 @@ export default function Planet({
         animation: `spin ${speed}s linear infinite`,
       }}
     >
-     
+  
       <div className="absolute inset-0 rounded-full border border-white/10" />
 
-      
       <div
-        className="absolute flex items-center justify-center pointer-events-auto"
+        className="absolute pointer-events-auto"
         style={{
           width: HITBOX,
           height: HITBOX,
@@ -49,17 +48,26 @@ export default function Planet({
         onPointerEnter={() => onHover(name)}
         onPointerLeave={() => onHover(null)}
       >
-        
+   
         <div
           className={`rounded-full transition-all duration-200 ${
-            isActive ? "shadow-[0_0_14px_4px_rgba(255,255,255,0.7)] scale-110" : ""
+            isActive
+              ? "shadow-[0_0_14px_4px_rgba(255,255,255,0.7)] scale-110"
+              : ""
           }`}
           style={{
             width: size,
             height: size,
             backgroundColor: color,
+            margin: "auto",
           }}
         />
+
+        {isActive && (
+          <div className="absolute left-10 top-1/2 -translate-y-1/2 whitespace-nowrap bg-black/70 text-white text-xs px-3 py-1 rounded-md border border-white/20 backdrop-blur">
+            <strong>{name}</strong>
+          </div>
+        )}
       </div>
     </div>
   );
