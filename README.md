@@ -1,4 +1,6 @@
 
+
+
  🌌  Interactive Solar System
 
 A simple interactive solar system built with Next.js and TypeScript.

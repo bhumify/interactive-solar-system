@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import Moon from "./Moon";
@@ -59,4 +58,3 @@ export default function EarthSystem({ isActive, onHover }: EarthSystemProps) {
     </div>
   );
 }
-
