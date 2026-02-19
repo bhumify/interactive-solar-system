@@ -13,8 +13,12 @@ A simple interactive solar system built with Next.js and TypeScript.
 
 This project includes animated planets, stars, shooting stars, the sun, and the moon using CSS animations.
 
+<<<<<<< HEAD
  🚀 Tech Stack
 >>>>>>> 1ce4657 (Updated  README)
+=======
+ 🚀Tech Stack
+>>>>>>> 5c88fd6 (update Readme)
 
 - Next.js
 - TypeScript
