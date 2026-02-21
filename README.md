@@ -44,21 +44,4 @@ npm run dev
 Open http://localhost:3000 in your browser.
 
 
-✨ Features
-
-- Orbiting planets
-- Twinkling stars
-- Shooting stars
-- Sun and moon
-- Responsive design
-
-📦 Run Locally
-
-git clone https://github.com/bhumify/interactive-solar-system.git  
-cd interactive-solar-system  
-npm install  
-npm run dev  
-
-Open http://localhost:3000 in your browser.
-
 
