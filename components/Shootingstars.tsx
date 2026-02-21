@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -43,6 +41,7 @@ export default function Shootingstars({ stars: initialStars = [] }: Shootingstar
   return (
     <div className="absolute inset-0 overflow-hidden">
       {stars.map((s) => {
+     
         const style: React.CSSProperties & { [key: string]: string | number } = {
           width: "80px",
           height: "2px",
@@ -50,8 +49,8 @@ export default function Shootingstars({ stars: initialStars = [] }: Shootingstar
           left: `${s.left}%`,
           opacity: 0,
           animation: `shoot ${s.duration}s linear 0s forwards`,
-          "--angle": `${s.direction * s.angle}deg`,
-          "--dir": s.direction,
+          ["--angle" as any]: `${s.direction * s.angle}deg`,
+          ["--dir" as any]: s.direction,
         };
 
         return <div key={s.id} className="absolute bg-white" style={style}></div>;
